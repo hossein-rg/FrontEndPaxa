@@ -1,0 +1,129 @@
+.container {
+  width: fit-content;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: inset 1px 1px 15px 1px black;
+  border-radius: 1rem;
+}
+
+.logout {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 2.5rem;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.changeicon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 2.5rem;
+  display: none;
+  cursor: pointer;
+}
+.divInvertory {
+  position: relative;
+  transition: 1s all ease;
+}
+.divStatus {
+  transition: 1s all ease;
+}
+
+.usageConatiner {
+  display: flex;
+  direction: rtl;
+  gap: 0.5rem;
+  justify-content: space-around;
+}
+
+.loadingSign {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.817), rgba(0, 32, 30, 0.816));
+  // background: #ff7777;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  h1 {
+    height: 100px;
+  }
+
+  h1 span {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    animation: bounce 0.5s ease infinite alternate;
+    font-size: 40px;
+    padding: 0 0.1rem;
+    color: #fff;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 transparent, 0 4px 0 transparent, 0 10px 10px rgba(255, 255, 255, 0.4);
+  }
+
+  h1 span:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+  h1 span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  h1 span:nth-child(4) {
+    animation-delay: 0.45s;
+  }
+  h1 span:nth-child(5) {
+    animation-delay: 0.6s;
+  }
+  h1 span:nth-child(6) {
+    animation-delay: 0.75s;
+  }
+  h1 span:nth-child(7) {
+    animation-delay: 0.9s;
+  }
+  h1 span:nth-child(8) {
+    animation-delay: 1.05s;
+  }
+  h1 span:nth-child(9) {
+    animation-delay: 1.2s;
+  }
+  h1 span:nth-child(10) {
+    animation-delay: 1.35s;
+  }
+  > p {
+    font-size: 1.7rem;
+  }
+}
+
+@keyframes bounce {
+  100% {
+    top: -3px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 50px 25px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-width: 730px) {
+  .container {
+    width: 95%;
+  }
+  .usageConatiner {
+    width: 100%;
+    margin: auto;
+  }
+  .divInvertory {
+    // width: auto;
+    // overflow: hidden;
+  }
+  .divStatus {
+    width: auto;
+    overflow: hidden;
+  }
+  .changeicon {
+    display: flex;
+  }
+}

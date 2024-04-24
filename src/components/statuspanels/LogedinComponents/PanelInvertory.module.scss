@@ -1,0 +1,255 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  //   justify-content: flex-start;
+  // align-items: center;
+  gap: 0.5rem;
+  // width: 40%;
+  max-width: 400px;
+  padding: 1rem;
+  box-shadow: inset 1px 1px 15px 1px black;
+  //   padding: 1rem;
+  border-radius: 1rem;
+}
+.headMoney {
+  display: flex;
+  box-shadow: 3px 3px 10px black;
+  padding: 0.5rem 1rem;
+  direction: rtl;
+  align-items: center;
+  width: 280px;
+  border-radius: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 2px solid white;
+  color: white;
+  > p {
+    font-size: 0.7rem;
+    font-family: FontIranLight;
+    inline-size: max-content;
+  }
+  > h4 {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    width: 9.5rem;
+    display: flex;
+    direction: ltr;
+    justify-content: flex-start;
+    font-family: FontIranLight;
+    color: #13ffb0 !important;
+  }
+}
+.row2on {
+  display: flex;
+  direction: rtl;
+  gap: 0.3rem;
+  .userOnline {
+    box-shadow: 3px 3px 10px black;
+    padding: 0.4rem 1rem;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 140px;
+    // background-color: rgb(255, 145, 0);
+    // background-color: rgb(255, 132, 0);
+    border-radius: 1rem;
+    border: 2px solid white;
+    color: white;
+    align-items: center;
+    > p {
+      font-size: 0.8rem;
+      font-family: FontIranBold;
+      inline-size: max-content;
+    }
+    > h4 {
+      font-size: 1.3rem;
+      padding: 0 0.5rem;
+      width: 2.4rem;
+      font-family: FontIranLight;
+      > text {
+        color: #13ffb0 !important;
+      }
+    }
+    > img {
+      width: 1.5rem;
+      position: relative;
+      top: -2px;
+    }
+  }
+  .userServer {
+    box-shadow: 3px 3px 10px black;
+    // background-color: rgb(255, 145, 0);
+    // background-color: rgb(255, 132, 0);
+    display: flex;
+    min-width: 135px;
+    border-radius: 1rem;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    width: 8.4rem;
+    h4 {
+      padding-right: 0.3rem;
+      font-size: 0.6rem;
+      font-family: FontIranLight;
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      white-space: nowrap;
+    }
+    p {
+      font-family: FontIranLight;
+      font-size: 1rem;
+      white-space: nowrap;
+      color: #13ffb0;
+    }
+    > div {
+      > img {
+        cursor: pointer;
+        width: 1rem;
+        position: absolute;
+        top: 3px;
+        left: 10px;
+      }
+      > div {
+        border: 2px solid white;
+        z-index: 2000;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        height: 0rem;
+        overflow: hidden;
+        transition: 0.7s all ease;
+        border-radius: 1rem;
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        .showDetect {
+          background-color: rgb(34, 34, 34);
+          padding: 1rem 0.5rem 0.2rem 0.5rem;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 0.3rem;
+          > p {
+            box-shadow: inset 1px 1px 15px 1px black;
+            width: 270px;
+            direction: ltr;
+            padding: 0 1rem 0 0;
+            display: flex;
+            align-items: center;
+            border-radius: 1rem;
+            // background-color: rgb(0, 0, 0);
+            gap: 1rem;
+            font-size: 0.8rem;
+            > span {
+              padding: 0.5rem 1rem;
+              color: black;
+              width: 5.5rem;
+              border-radius: 1rem 0 0 1rem;
+            }
+          }
+        }
+        :first-child p:first-child span {
+          background: linear-gradient(75deg, #ffffff, #989898);
+        }
+        :first-child p:nth-child(2) span {
+          background: linear-gradient(75deg, #bda100, #ffc800);
+        }
+        :first-child p:nth-child(3) span {
+          background: linear-gradient(75deg, #d7f8ff, #76e6ff);
+        }
+        :first-child p:nth-child(4) span {
+          background: linear-gradient(75deg, #8bffe8, #007478);
+        }
+        .showHinter {
+          border-radius: 0 0 1rem 1rem;
+          background-color: rgb(34, 34, 34);
+          padding: 1rem 1rem 0 1rem;
+          > p {
+            position: relative;
+            top: -11px;
+            padding: 0 1rem;
+            font-size: 0.6rem;
+            > span {
+              margin-left: 0.4rem;
+            }
+          }
+        }
+      }
+      &:hover {
+        > div {
+          visibility: visible;
+          height: 14.6rem;
+          transition: 0.7s ease all;
+        }
+      }
+    }
+  }
+}
+
+.row3on {
+  box-shadow: 3px 3px 10px black;
+  // background-color: rgb(255, 145, 0);
+  // background-color: rgb(255, 132, 0);
+  border-radius: 1rem;
+  width: 280px;
+  border: 2px solid white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  // width: 100%;
+  overflow: hidden;
+  gap: 0.2rem;
+  white-space: nowrap;
+  .catchmedal {
+    border-bottom: 2px white solid;
+    display: flex;
+    h4 {
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      font-family: FontIranLight;
+      color: white;
+      span {
+        font-family: FontIranBold;
+        font-size: 1rem;
+        color: white;
+      }
+    }
+    > img {
+      cursor: pointer;
+    }
+  }
+  .catchAllusers {
+    padding: 0.4rem 1rem 0.4rem 5rem;
+    position: relative;
+    > span {
+      position: absolute;
+      left: 10px;
+      font-size: 0.8rem;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+    > p {
+      font-size: 0.9rem;
+      font-family: FontIranLight;
+      > span {
+        color: #13ffb0;
+      }
+    }
+  }
+}
+
+@media (max-width: 635px) {
+  .userServer {
+    overflow: visible !important;
+    div {
+      div {
+        top: 0 !important;
+        right: -175px !important;
+      }
+    }
+  }
+}

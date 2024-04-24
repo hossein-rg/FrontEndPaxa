@@ -1,0 +1,429 @@
+.userInb {
+  display: flex;
+  gap: 0.5rem;
+  direction: rtl;
+  background: linear-gradient(75deg, rgba(0, 185, 145, 0.481), rgba(0, 66, 59, 0.514));
+  border-radius: 1rem;
+  //   padding: 0.2rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  p {
+    font-family: FontIranLight;
+    color: white;
+    > span {
+      font-family: sans-serif;
+      direction: ltr;
+    }
+  }
+  .emailuser {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0rem 0.5rem;
+    > :first-child {
+      font-size: 0.7rem;
+      font-family: FontIranBold;
+      span {
+        font-size: 1rem;
+      }
+    }
+    > p {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      :last-child {
+        background-color: rgb(255, 217, 0);
+        font-size: 0.5rem;
+        color: black;
+        font-family: FontIranBold;
+        padding: 0.1rem 0.2rem;
+        border-radius: 0.5rem;
+      }
+    }
+    div {
+      gap: 0.2rem;
+      display: flex;
+      > p:first-child {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem 0 0.5rem 0;
+        width: fit-content;
+        color: black;
+      }
+      > p:nth-child(2) {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+        background-color: rgb(0, 221, 155);
+        color: black;
+        border-radius: 0 0.5rem 0 0.5rem;
+        width: fit-content;
+        cursor: pointer;
+      }
+      > p:nth-child(3) {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+        background-color: rgb(255, 212, 22);
+        color: black;
+        border-radius: 0.5rem 0 0.5rem 0;
+        width: fit-content;
+        z-index: 3;
+        cursor: pointer;
+      }
+    }
+  }
+  // .emailuser {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 0.3rem;
+  //   padding: 0rem 0.5rem;
+  //   > :first-child {
+  //     font-size: 0.7rem;
+  //     font-family: FontIranBold;
+  //     span {
+  //       font-size: 1rem;
+  //     }
+  //   }
+  //   > p {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 0.5rem;
+  //     :last-child {
+  //       background-color: rgb(255, 217, 0);
+  //       font-size: 0.5rem;
+  //       color: black;
+  //       font-family: FontIranBold;
+  //       padding: 0.1rem 0.2rem;
+  //       border-radius: 0.5rem;
+  //     }
+  //   }
+  //   div {
+  //     gap: 0.2rem;
+  //     display: flex;
+  //     > p:first-child {
+  //       font-size: 0.8rem;
+  //       padding: 0.2rem 0.5rem;
+  //       border-radius: 0.5rem 0 0.5rem 0;
+  //       width: fit-content;
+  //       color: black;
+  //     }
+  //     > p:nth-child(2) {
+  //       font-size: 0.8rem;
+  //       padding: 0.2rem 0.5rem;
+  //       background-color: rgb(0, 221, 155);
+  //       color: black;
+  //       border-radius: 0 0.5rem 0 0.5rem;
+  //       width: fit-content;
+  //       cursor: pointer;
+  //     }
+  //     > p:nth-child(3) {
+  //       font-size: 0.8rem;
+  //       padding: 0.2rem 0.5rem;
+  //       background-color: rgb(255, 212, 22);
+  //       color: black;
+  //       border-radius: 0.5rem 0 0.5rem 0;
+  //       width: fit-content;
+  //       z-index: 3;
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
+  .usageuser {
+    display: flex;
+    > p {
+      font-family: sans-serif;
+      font-size: 0.9rem;
+      direction: rtl;
+      padding: 0 0.1rem;
+      color: black;
+      > span {
+        font-size: 0.7rem;
+        padding-right: 0.2rem;
+        font-family: FontIranBold;
+      }
+    }
+  }
+  .expireuser {
+    font-size: 0.9rem;
+    span {
+      font-family: FontIranBold;
+      font-size: 0.8rem;
+      color: black;
+    }
+  }
+  .emailUuid {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    p {
+      font-size: 0.7rem;
+      font-family: sans-serif;
+      direction: ltr;
+    }
+  }
+  .suboredit {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    button {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.8rem;
+      border-radius: 0.9rem 0 0.9rem 0;
+      background-color: #ffbb007d;
+      //   bacskground-color: transparent;
+      box-shadow: inset 1px 1px 15px 3px #ffae00a7;
+      cursor: pointer;
+    }
+    :last-child {
+      border-radius: 0 0.9rem 0 0.9rem;
+      background-color: hsla(0, 100%, 71%, 0.654);
+      box-shadow: inset 1px 1px 15px 3px #850000a7;
+    }
+  }
+}
+
+.maincontainer {
+  padding: 1rem 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 500px;
+  overflow: auto;
+  position: relative;
+  .filterbox {
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .filter {
+      padding: 0.7rem;
+      width: 12rem;
+      display: flex;
+      gap: 0.5rem;
+      border-radius: 1rem;
+      box-shadow: inset 1px 1px 15px 1px black;
+      color: white;
+      position: relative;
+      .autoOpen {
+        position: absolute;
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+        background-color: rgb(120, 120, 120);
+        border-radius: 0.5rem;
+        left: 5px;
+        top: 10px;
+        display: none;
+        overflow: hidden;
+        z-index: 10;
+        button {
+          height: 3rem;
+          padding: 0.6rem 1rem;
+          box-shadow: inset 1px 1px 15px 1px black;
+          border-radius: 0.5rem;
+          font-family: FontIranLight;
+          background-color: transparent;
+          color: white;
+          width: 7rem;
+          cursor: pointer;
+        }
+      }
+      > button {
+        padding: 0.6rem 1rem;
+        box-shadow: inset 1px 1px 15px 1px black;
+        border-radius: 0.5rem;
+        font-family: FontIranLight;
+        background-color: transparent;
+        color: white;
+        width: 7rem;
+        cursor: pointer;
+      }
+      > p {
+        font-family: FontIranLight;
+        position: relative;
+        bottom: -0.5rem;
+      }
+      > img {
+        width: 1.5rem;
+        filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(176deg) brightness(108%) contrast(101%);
+      }
+    }
+    .searchbox {
+      .search {
+        padding: 0.7rem 1rem;
+        font-family: sans-serif;
+        background-color: transparent;
+        box-shadow: inset 1px 1px 15px 1px black;
+        color: white;
+        border-radius: 1rem;
+        &:enabled {
+          border: none;
+          outline: none;
+        }
+        &::placeholder {
+          font-family: FontIranBold;
+        }
+      }
+      > p {
+        padding-top: 0.5rem;
+        padding-right: 0.6rem;
+        color: white;
+        font-family: FontIranLight;
+        font-size: 0.6rem;
+      }
+    }
+  }
+  .newaccount {
+    flex-grow: 1;
+    width: fit-content;
+    justify-content: end;
+    display: flex;
+    align-items: center;
+    button {
+      box-shadow: inset 1px 1px 15px 1px black;
+      color: white;
+      font-family: FontIranLight;
+      padding: 1rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      background-color: transparent;
+    }
+  }
+}
+
+.FatherAddUser {
+  position: fixed;
+  top: 50%;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(21, 21, 21, 0.684);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.autoOpentoggle {
+  display: flex !important;
+  animation: animeopen 1s forwards ease !important;
+}
+@keyframes animeopen {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 635px) {
+  .maincontainer {
+    height: auto;
+    padding: 0.3rem 0;
+  }
+  .filterbox {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.3rem !important;
+    .newaccount {
+      position: absolute !important;
+      left: 0;
+      button {
+        padding: 0.5rem;
+      }
+    }
+  }
+  .filter {
+    padding: 0.3rem 0.5rem 0.3rem 0.3rem !important;
+    align-items: center !important;
+    width: auto !important  ;
+    > p {
+      font-size: 0.8rem;
+      bottom: 0 !important;
+    }
+    > img {
+      width: 1rem !important;
+    }
+    > button {
+      padding: 0.3rem !important;
+      border-radius: 0.8rem !important;
+    }
+    .autoOpen {
+      top: 5px !important;
+      height: fit-content !important;
+      gap: 0.3rem !important;
+      button {
+        padding: 0.3rem !important;
+        height: auto !important;
+      }
+    }
+  }
+  .searchbox {
+    display: flex;
+    align-items: flex-end;
+    input {
+      padding: 0.6rem !important;
+    }
+  }
+  // users
+  .userInb {
+    .usageuser {
+      // will come
+      position: absolute;
+      top: 6px;
+      left: 4rem;
+      p {
+        font-size: 0.7rem;
+        span {
+          font-size: 0.6rem;
+        }
+      }
+    }
+    .emailUuid {
+      // position: absolute;
+      left: 0;
+      :first-child {
+        display: none;
+      }
+      :last-child {
+        position: absolute;
+        bottom: 0;
+        left: 4rem;
+      }
+    }
+    .emailuser {
+      white-space: nowrap;
+      > p {
+        font-size: 0.6rem !important;
+        > span {
+          font-size: 0.8rem !important;
+        }
+        :last-child {
+          font-size: 0.5rem !important;
+          z-index: 2;
+        }
+      }
+    }
+    .expireuser {
+      position: absolute;
+      bottom: 15px;
+      left: 4rem;
+      white-space: nowrap;
+      p {
+        font-size: 0.7rem;
+        span {
+          font-size: 0.6rem !important;
+        }
+      }
+    }
+    .suboredit {
+      button {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

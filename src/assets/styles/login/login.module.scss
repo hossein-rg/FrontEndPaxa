@@ -1,0 +1,442 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "FontFire";
+  src: url("../../fonts/Semakin.otf") format("truetype"), url("../../fonts/Blazed.ttf") format("woff"),
+    url("../../fonts/Blazed.ttf") format("woff2");
+}
+
+html {
+  // overflow: hidden;
+  width: 100%;
+}
+
+.body {
+  position: fixed;
+  background-color: #202020;
+  width: 100vw;
+  height: 100%;
+  overscroll-behavior: none;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  // position: relative;
+  // background-color: black;
+  // width: 100vw;
+  // height: 100vh;
+}
+
+.bodyLogin {
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 1%, 10%);
+  background-color: #202020;
+  // transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  .headerTop {
+    display: flex;
+    align-items: center;
+    color: rgb(255, 170, 0);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    left: -7px;
+    img {
+      width: 9rem;
+    }
+    p {
+      font-family: FontFire;
+      position: relative;
+      left: -40px;
+      bottom: -15px;
+      font-size: 40px;
+    }
+  }
+  .headerLogin {
+    display: flex;
+    flex-direction: column;
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .uiLogin {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 1rem;
+      .uiUsername {
+        display: flex;
+        align-items: center;
+        position: relative;
+        input {
+          font-size: 1.1rem;
+          padding: 1rem 1rem 1rem 5rem;
+          border-radius: 10rem;
+          border: none;
+          outline: none;
+          font-family: sans-serif;
+          font-weight: bold;
+          &:hover {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+      .uiPassword {
+        display: flex;
+        align-items: center;
+        position: relative;
+        input {
+          font-size: 1.1rem;
+          padding: 1rem 1rem 1rem 5rem;
+          border-radius: 10rem;
+          border: none;
+          outline: none;
+          font-family: sans-serif;
+          font-weight: bold;
+          &:hover {
+            border: none;
+            outline: none;
+          }
+        }
+        span {
+          position: absolute;
+          top: 50%;
+          right: 3rem;
+          cursor: pointer;
+          img {
+            transform: translateY(-50%);
+            width: 2rem;
+          }
+        }
+      }
+      // img {
+      //   position: absolute;
+      //   background-color: rgb(255, 255, 255);
+      //   border-radius: 50%;
+      //   padding: 0.3rem;
+      //   width: 4rem;
+      // }
+    }
+  }
+}
+
+.uiSubmit {
+  background-color: rgb(255, 255, 255);
+  width: 15rem;
+  border-radius: 5rem;
+  margin: auto;
+  color: teal;
+  margin-top: 1rem;
+  box-shadow: 3px 3px 7px rgb(0, 0, 0);
+  padding: 0.7rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 350px) {
+  .uiPassword {
+    input {
+      font-size: 0.9rem !important;
+    }
+    > img {
+      width: 3.6rem !important;
+    }
+  }
+  .uiUsername {
+    input {
+      font-size: 0.9rem !important;
+    }
+    > img {
+      width: 3.6rem !important;
+    }
+  }
+  .uiSubmit {
+    font-size: 1rem !important;
+    width: 11rem !important;
+  }
+}
+
+.input {
+  width: 220px;
+  border: 2px solid transparent;
+  height: 45px;
+  border: none;
+  font-family: sans-serif;
+  outline: none;
+  padding: 25px 7px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px;
+  background-color: transparent;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1), -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+  color: #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1), -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.wave_group .input:valid,
+.wave_group .input:focus {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1), -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+.wave_group {
+  position: relative;
+}
+
+.wave_group .label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+  padding: 0 0.5rem;
+}
+
+.wave_group .labelChar {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * 0.05s);
+}
+
+.wave_group .input:focus ~ label .labelChar,
+.wave_group .input:valid ~ label .labelChar {
+  transform: translate(-10px, -35px);
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.wave_group .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+// .wave_group .bar:before,
+// .wave_group .bar:after {
+//   content: "";
+//   height: 2px;
+//   width: 0;
+//   bottom: 1px;
+//   position: absolute;
+//   background: #5264ae;
+//   transition: 0.2s ease all;
+//   -moz-transition: 0.2s ease all;
+//   -webkit-transition: 0.2s ease all;
+// }
+
+.wave_group .bar:before {
+  left: 50%;
+}
+
+.wave_group .bar:after {
+  right: 50%;
+}
+
+.wave_group .input:focus ~ .bar:before,
+.wave_group .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.container {
+  align-items: center;
+  border-radius: 40px;
+  background-color: transparent;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1), -1px -1px 6px rgba(255, 255, 255, 0.4);
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  margin: auto;
+  margin-top: 1rem;
+  > div {
+    position: absolute;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+}
+.text {
+  color: white;
+  position: absolute;
+  transition: opacity 300ms;
+  user-select: none;
+  -moz-user-select: none;
+}
+.fingerprint {
+  /* height: 80px; */
+  left: -8px;
+  opacity: 0;
+  position: absolute;
+  stroke: #777;
+  top: -9px;
+  transition: opacity 1ms;
+}
+.fingerprint_active {
+  stroke: #fff;
+}
+.fingerprint_out {
+  opacity: 1;
+}
+.odd {
+  stroke-dasharray: 0px 50px;
+  stroke-dashoffset: 1px;
+  transition: stroke-dasharray 1ms;
+}
+.even {
+  stroke-dasharray: 50px 50px;
+  stroke-dashoffset: -41px;
+  transition: stroke-dashoffset 1ms;
+}
+.ok {
+  opacity: 0;
+}
+.active.container {
+  animation: 6s Container;
+}
+.active .text {
+  opacity: 0;
+  animation: 6s Text forwards;
+}
+.active .fingerprint {
+  opacity: 1;
+  transition: opacity 300ms 200ms;
+}
+.active .fingerprint_base .odd {
+  stroke-dasharray: 50px 50px;
+  transition: stroke-dasharray 800ms 100ms;
+}
+.active .fingerprint_base .even {
+  stroke-dashoffset: 0px;
+  transition: stroke-dashoffset 800ms;
+}
+.active .fingerprint_active .odd {
+  stroke-dasharray: 50px 50px;
+  transition: stroke-dasharray 2000ms 1500ms;
+}
+.active .fingerprint_active .even {
+  stroke-dashoffset: 0px;
+  transition: stroke-dashoffset 2000ms 1300ms;
+}
+.active .fingerprint_out {
+  opacity: 0;
+  transition: opacity 300ms 4100ms;
+}
+.active .ok {
+  opacity: 1;
+  animation: 6s Ok forwards;
+}
+@keyframes Container {
+  0% {
+    width: 200px;
+  }
+  6% {
+    width: 50px;
+  }
+  71% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  77% {
+    transform: scale(1);
+  }
+
+  94% {
+    width: 50px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+@keyframes Text {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  6% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  94% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes Ok {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  77% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  92% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  96% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.togglepassword {
+  position: absolute;
+  top: 50%;
+  right: 0.3rem;
+  height: fit-content;
+  cursor: pointer;
+  background-color: transparent !important;
+  img {
+    transform: translateY(-50%);
+    width: 2rem !important;
+    padding: 0.3rem;
+  }
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 187, 0);
+  > p {
+    font-family: sans-serif;
+    color: white;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "FontIranLight";
+  src: url("../../fonts/IRANSansXFaNum-Light.ttf") format("truetype"), url("../../fonts/IRANSansXFaNum-Light.ttf") format("woff"),
+    url("../../fonts/IRANSansXFaNum-Light.ttf") format("woff2");
+}
+
+.channellbox {
+  position: absolute;
+  top: 0rem;
+  left: 0.4rem;
+  .channellimg {
+    width: 2.4rem;
+    cursor: pointer;
+  }
+  span {
+    background-color: #73c000;
+    position: absolute;
+    top: 0rem;
+    left: 1.8rem;
+    border-radius: 50%;
+    width: 1.2rem;
+    font-size: 0.9rem;
+    height: 1.2rem;
+    text-align: center;
+  }
+}
+
+.container {
+  background-color: #18191d;
+  z-index: 10;
+  position: absolute;
+  top: 86px;
+  width: 340px;
+  height: 400px;
+  left: 161px;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+}
+.container_open {
+  animation: openChanell 0.5s ease forwards;
+  display: flex;
+}
+.container_close {
+  animation: closeChanell 1s ease forwards;
+  display: flex;
+}
+.head {
+  display: flex;
+  gap: 0.7rem;
+  background-color: #282e33;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  .head_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+    > h2 {
+      font-size: 1rem;
+      font-family: FontIranLight;
+    }
+    > p {
+      font-size: 0.8rem;
+      font-family: FontIranLight;
+    }
+  }
+  .picarrow {
+    transform: rotate(180deg);
+    width: 2rem;
+    cursor: pointer;
+  }
+  .picprof {
+    width: 3rem;
+    border-radius: 50%;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1rem;
+  height: 335px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  .messages {
+    padding: 2rem 0.4rem 0rem 0.5rem;
+    border-radius: 0.8rem;
+    background-color: rgb(0, 32, 32);
+    position: relative;
+    left: 5px;
+    background-color: #33393f;
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    > h2 {
+      font-size: 1rem;
+      position: absolute;
+      top: 0.3rem;
+      left: 0.5rem;
+      color: aqua;
+    }
+    > p {
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+      font-family: FontIranLight;
+      overflow: hidden;
+      padding-right: 0.3rem;
+      display: flex;
+      flex-direction: column;
+      > a:link,
+      a:visited,
+      span {
+        cursor: pointer;
+        font-family: sans-serif;
+        text-align: left;
+        text-decoration: underline;
+        color: #00c1a7;
+      }
+    }
+    .foter_msg {
+      display: flex;
+      font-size: 0.7rem;
+      gap: 0.5rem;
+      padding: 0.2rem;
+      .foter_msg_veiw {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.2rem;
+        width: 3rem;
+        > p {
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          color: white;
+          color: #9a9a9a;
+        }
+        > img {
+          filter: invert(83%) sepia(44%) saturate(4759%) hue-rotate(124deg) brightness(104%) contrast(101%);
+          width: 0.9rem;
+          filter: invert(69%) sepia(5%) saturate(34%) hue-rotate(314deg) brightness(90%) contrast(83%);
+        }
+      }
+      > p {
+        direction: ltr;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #9a9a9a;
+      }
+    }
+  }
+}
+
+.messageCreate {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+  p {
+    white-space: nowrap;
+    padding: 0.3rem 0.5rem;
+    background-color: #2f343b;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+@keyframes openChanell {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes closeChanell {
+  0% {
+    width: 340px;
+  }
+  30% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    width: 300px;
+    left: 141px;
+    .messages {
+      width: 270px;
+    }
+  }
+}

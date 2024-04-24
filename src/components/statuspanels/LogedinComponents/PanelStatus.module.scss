@@ -1,0 +1,173 @@
+.container {
+  max-width: 365px;
+  direction: ltr;
+  box-shadow: inset 1px 1px 15px 1px black;
+  border-radius: 1rem;
+  padding: 1rem;
+  .usageGiga {
+    box-shadow: inset 1px 1px 15px 1px black;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    p {
+      color: white;
+      font-family: FontIranLight;
+      font-size: 0.7rem;
+      span {
+        font-size: 1rem;
+      }
+    }
+    :nth-child(3) {
+      text-align: right;
+    }
+
+    .usageProcess {
+      width: 19rem;
+      height: 1.2rem;
+      background-color: rgb(87, 87, 87);
+      border-radius: 0.6rem;
+      position: relative;
+      direction: ltr;
+      margin: 0.1rem 0;
+      overflow: hidden;
+      > div {
+        position: absolute;
+        inset: 0;
+        animation: animeSetWidth 6s forwards ease;
+        // width: 4%;
+        top: 0;
+        right: 0;
+        border-radius: 1rem 0 0 1rem;
+        height: 100%;
+        background-color: rgb(112, 255, 224);
+      }
+    }
+  }
+}
+.row2on {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  .cpuram {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.6rem;
+    box-shadow: inset 1px 1px 15px 1px black;
+    div {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      > div {
+        width: 1.2rem;
+        height: 4rem;
+        position: relative;
+        transform: rotate(180deg);
+        border-radius: 1rem;
+        background-color: rgb(255, 255, 255);
+        &:after {
+          content: "";
+          inset: 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          border-radius: 1rem 1rem 0 0;
+          background-color: rgb(39, 255, 136);
+          animation: animeSetHeight 0.7s ease forwards;
+          transition: 0.6s all ease;
+        }
+      }
+      > p {
+        color: white;
+        font-family: FontIranLight;
+      }
+    }
+  }
+  .refDisk {
+    &:after {
+      height: var(--set-disk) !important;
+    }
+  }
+  .refRam {
+    &:after {
+      height: var(--set-ram) !important;
+    }
+  }
+  .refCpu {
+    &:after {
+      height: var(--set-cpu) !important;
+    }
+  }
+  .updown {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.2rem;
+    box-shadow: inset 1px 1px 15px 1px black;
+    border-radius: 0.6rem;
+    div {
+      display: flex;
+      justify-content: space-around;
+      direction: ltr;
+      align-items: center;
+      text {
+        width: 3.5rem;
+      }
+      p {
+        font-family: FontIranLight;
+        color: white !important;
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+      :nth-child(1) {
+        font-family: FontIranBold;
+        color: white !important;
+      }
+    }
+  }
+}
+
+@keyframes animeSetWidth {
+  from {
+    width: 100%;
+  }
+}
+
+@keyframes animeSetHeight {
+  from {
+    height: 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 310px;
+    .usageGiga {
+      // padding: 0.3rem 1rem;
+      .usageProcess {
+        width: 15.5rem;
+        height: 1.2rem;
+      }
+    }
+  }
+  .row2on {
+    .cpuram {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.7rem;
+      div {
+        > div {
+          width: 1rem;
+          height: 4rem;
+        }
+      }
+    }
+    .updown {
+      padding: 1.9rem 0.7rem;
+    }
+  }
+}
