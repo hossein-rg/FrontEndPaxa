@@ -9,6 +9,8 @@ class SelectPackage extends React.Component {
       packages: null,
     };
   }
+
+
   handleSelect = (element) => {
     const selectedElement = element.target.dataset.set;
     const btns = element.target.parentElement.children;

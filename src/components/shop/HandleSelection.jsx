@@ -40,6 +40,8 @@ class HandleSelection extends React.Component {
     });
   };
 
+
+
   handleSelectTerm = (op1, op2, op3) => {
     this.setState({
       option1: op1,

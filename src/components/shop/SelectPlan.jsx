@@ -12,6 +12,8 @@ class SelectPlan extends React.Component {
     return this.props.check(selectedElement);
   };
 
+
+
   componentDidMount = () => {
     this.props.check(null);
   };
