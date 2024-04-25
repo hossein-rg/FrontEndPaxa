@@ -9,6 +9,8 @@ class ShowResultPackage extends React.Component {
           صبر کنید ...
         </div>
       );
+
+
     } else {
       return (
         <div className={styles.bodyResult}>
